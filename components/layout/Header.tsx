@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { firm } from "@/data/firm";
+import Image from "next/image";
 
 const navigation = [
   { label: "About", href: "/about" },
@@ -49,9 +50,15 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className="group flex items-center gap-3"
           >
-            <span className="flex h-9 w-9 items-center justify-center border border-gold text-[11px] font-medium tracking-[0.08em] text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-ink">
+            {/* <span className="flex h-9 w-9 items-center justify-center border border-gold text-[11px] font-medium tracking-[0.08em] text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-ink">
               LA
-            </span>
+            </span> */}
+            <Image
+            src={"/images/logo.png"}
+            alt="Main Firm logo"
+            width={60}
+            height={25} 
+            />
 
             <span className="hidden sm:block">
               <span className="block font-serif text-lg leading-none text-cream">

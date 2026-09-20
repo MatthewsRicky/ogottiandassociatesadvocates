@@ -1,6 +1,9 @@
+"use client"
+
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { firm } from "@/data/firm";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,9 +12,16 @@ export default function Footer() {
         <div className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr] lg:py-20">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center border border-gold text-[11px] font-medium tracking-[0.08em] text-gold">
+              {/* <span className="flex h-10 w-10 items-center justify-center border border-gold text-[11px] font-medium tracking-[0.08em] text-gold">
                 LA
-              </span>
+              </span> */}
+
+              <Image
+                src={"/images/logo.png"}
+                alt="Main Firm logo"
+                width={60}
+                height={25}
+              />
 
               <div>
                 <p className="font-serif text-xl">L.A. Ogotti</p>
