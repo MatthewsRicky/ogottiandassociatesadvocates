@@ -11,7 +11,7 @@ export default function ExpertiseGrid() {
           {expertise.map((item, index) => (
             <Reveal key={item.number} delay={index * 0.04}>
               <article
-                id={item.number}
+                id={item.slug}
                 className="scroll-mt-28 border-b border-line py-12 sm:py-16"
               >
                 <div className="grid gap-8 lg:grid-cols-[90px_0.8fr_1fr] lg:gap-12">

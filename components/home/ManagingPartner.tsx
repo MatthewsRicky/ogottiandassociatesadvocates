@@ -12,17 +12,18 @@ export default function ManagingPartner() {
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden bg-charcoal">
               <Image
-                src={"/images/team/leonida.jpeg"}
-                alt="Leonida Atieno Ogotti - Managing Partner"
-                width={4000}
-                height={400}
+                src="/images/team/leonida.jpeg"
+                alt="Leonida Atieno Ogotti, Founder and Managing Partner"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(184,154,90,0.14),transparent_45%)]" />
 
               <div className="absolute inset-8 border border-gold/20" />
 
               <div className="absolute inset-0 flex items-center justify-center p-12 text-center">
-                <div className=" bg-black/70 p-6 rounded-xl">
+                <div className=" bg-black/70 p-2 md:p-6 rounded-xl">
                   <p className="text-[9px] uppercase tracking-[0.28em] text-gold">
                     Managing Partner
                   </p>

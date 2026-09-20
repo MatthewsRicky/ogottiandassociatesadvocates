@@ -1,6 +1,7 @@
 export const expertise = [
   {
     number: "01",
+    slug: "conveyancing-real-estate",
     title: "Conveyancing & Real Estate",
     shortDescription:
       "Property transactions, conveyancing, due diligence and property-related legal advisory services.",
@@ -9,6 +10,7 @@ export const expertise = [
   },
   {
     number: "02",
+    slug: "commercial-corporate-law",
     title: "Commercial & Corporate Law",
     shortDescription:
       "Commercial contracts, corporate advisory, business transactions and legal compliance.",
@@ -17,6 +19,7 @@ export const expertise = [
   },
   {
     number: "03",
+    slug: "employment-labour-law",
     title: "Employment & Labour Law",
     shortDescription:
       "Employment documentation, workplace matters, disputes and advisory services.",
@@ -25,6 +28,7 @@ export const expertise = [
   },
   {
     number: "04",
+    slug: "estate-planning-succession-probate",
     title: "Estate Planning, Succession & Probate",
     shortDescription:
       "Wills, trusts, succession planning, probate and administration of estates.",
@@ -33,6 +37,7 @@ export const expertise = [
   },
   {
     number: "05",
+    slug: "civil-commercial-litigation",
     title: "Civil & Commercial Litigation",
     shortDescription:
       "Representation and advice in civil, commercial, contractual and property disputes.",
@@ -41,6 +46,7 @@ export const expertise = [
   },
   {
     number: "06",
+    slug: "criminal-law-litigation",
     title: "Criminal Law & Litigation",
     shortDescription:
       "Criminal defence, court representation, bail and bond applications and appeals.",
@@ -49,6 +55,7 @@ export const expertise = [
   },
   {
     number: "07",
+    slug: "family-law",
     title: "Family Law",
     shortDescription:
       "Professional and confidential assistance in family-related legal matters.",

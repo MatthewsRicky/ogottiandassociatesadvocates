@@ -18,7 +18,7 @@ export default function ExpertisePreview() {
           {expertise.map((item, index) => (
             <Reveal key={item.number} delay={index * 0.04}>
               <Link
-                href={`/expertise#${item.number}`}
+                href={`/expertise#${item.slug}`}
                 className="group grid gap-5 border-b border-line py-7 transition-colors hover:bg-cream sm:grid-cols-[70px_1fr_auto] sm:items-center sm:px-4"
               >
                 <span className="font-serif text-sm text-gold-dark">

@@ -72,7 +72,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-8 md:flex">
             {navigation.map((item) => (
               <Link
                 key={item.href}
@@ -97,7 +97,7 @@ export default function Header() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className="relative flex h-10 w-10 items-center justify-center lg:hidden"
+            className="relative flex h-10 w-10 items-center justify-center md:hidden"
           >
             <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
 
