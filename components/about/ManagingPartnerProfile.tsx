@@ -48,7 +48,7 @@ export default function ManagingPartnerProfile() {
             <div className="mt-9 space-y-6 text-base leading-8 text-cream/60">
               <p>{managingPartner.shortBio}</p>
 
-              <p>{managingPartner.experience}</p>
+            
 
               <p>
                 Leonida founded the Firm in April 2025 with a philosophy centred
@@ -70,9 +70,6 @@ export default function ManagingPartnerProfile() {
               </div>
             </div>
 
-            <blockquote className="mt-10 border-l border-gold pl-6 font-serif text-xl leading-8 text-cream/80">
-              “{managingPartner.philosophy}”
-            </blockquote>
           </Reveal>
         </div>
       </Container>

@@ -90,10 +90,7 @@ Her litigation practice involves advising and representing clients in civil and 
 
 Dinah brings a careful, analytical and solution-oriented approach to her practice. She is committed to understanding the specific circumstances of each client and providing clear, practical and commercially conscious legal advice. Her approach is founded on professionalism, diligence, confidentiality and a commitment to protecting clients' interests while providing effective legal representation and advisory services.`,
 
-    practiceAreas: [
-      "Civil & Criminal Litigation",
-      "Constitutional Law",
-    ],
+    practiceAreas: ["Civil & Criminal Litigation", "Constitutional Law"],
   },
 ] as const;
 
