@@ -29,9 +29,9 @@ export const expertise = [
   {
     number: "04",
     slug: "estate-planning-succession-probate",
-    title: "Estate Planning, Succession & Probate",
+    title: "Estate Planning",
     shortDescription:
-      "Wills, trusts, succession planning, probate and administration of estates.",
+      "Succession, wills, trusts, succession planning, probate and administration of estates, nomination of beneficiaries, power of attorney.",
     description:
       "We advise individuals and families on testamentary planning, trusts, succession, grants of representation and estate administration.",
   },
@@ -49,7 +49,7 @@ export const expertise = [
     slug: "criminal-law-litigation",
     title: "Criminal Law & Litigation",
     shortDescription:
-      "Criminal defence, court representation, bail and bond applications and appeals.",
+      "Court representation, bail and bond applications and appeals.",
     description:
       "The Firm provides legal representation and advice in criminal matters before the courts.",
   },

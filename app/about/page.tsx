@@ -17,7 +17,7 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <FirmStory />
-      <ManagingPartnerProfile />
+      {/* <ManagingPartnerProfile /> */}
       <TeamSection />
       <ProfessionalStandards />
       <FinalCTA />

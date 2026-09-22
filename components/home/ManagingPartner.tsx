@@ -1,45 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
+
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import { managingPartner } from "@/data/team";
-import Image from "next/image";
 
 export default function ManagingPartner() {
   return (
     <section className="bg-ink py-24 text-cream sm:py-32 lg:py-40">
       <Container>
         <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-24">
+          {/* Portrait */}
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden bg-charcoal">
               <Image
                 src="/images/team/leonida.jpeg"
-                alt="Leonida Atieno Ogotti, Founder and Managing Partner"
+                alt={`${managingPartner.name}, ${managingPartner.role}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
+
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(184,154,90,0.14),transparent_45%)]" />
 
-              <div className="absolute inset-8 border border-gold/20" />
+              <div className="absolute inset-6 border border-gold/20 sm:inset-8" />
 
-              <div className="absolute inset-0 flex items-center justify-center p-12 text-center">
-                <div className=" bg-black/70 p-2 md:p-6 rounded-xl">
-                  <p className="text-[9px] uppercase tracking-[0.28em] text-gold">
+              <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8">
+                <div className="bg-ink/85 px-5 py-4 backdrop-blur-sm">
+                  <p className="text-[9px] font-medium uppercase tracking-[0.28em] text-gold">
                     Managing Partner
                   </p>
 
-                  <p className="mt-4 font-serif text-3xl leading-tight text-cream/80">
-                    Leonida
-                    <br />
-                    Atieno Ogotti
+                  <p className="mt-2 font-serif text-xl leading-tight text-cream">
+                    Leonida Atieno Ogotti
                   </p>
-
-                  <div className="mx-auto mt-6 h-px w-12 bg-gold" />
                 </div>
               </div>
             </div>
           </Reveal>
 
+          {/* Content */}
           <Reveal delay={0.1}>
             <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-gold">
               About the Managing Partner
@@ -53,19 +53,20 @@ export default function ManagingPartner() {
               {managingPartner.role}
             </p>
 
-            <div className="mt-8 max-w-2xl space-y-5 text-base leading-8 text-cream/60">
-              <p>{managingPartner.shortBio}</p>
+            <p className="mt-8 max-w-2xl text-base leading-8 text-cream/60">
+              {managingPartner.shortBio}
+            </p>
 
-              <p>
-                As Managing Partner, Leonida takes a hands-on approach to the
-                Firm's work, placing particular emphasis on understanding each
-                client's objectives before developing an appropriate legal
-                strategy.
-              </p>
-            </div>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-cream/60">
+              As Managing Partner, Leonida takes a hands-on approach to the
+              Firm&apos;s work and places particular emphasis on understanding
+              each client&apos;s objectives before developing an appropriate
+              legal strategy.
+            </p>
 
-            <blockquote className="mt-9 border-l border-gold pl-6 font-serif text-xl leading-8 text-cream/80">
-              “{managingPartner.philosophy}”
+            <blockquote className="mt-9 max-w-2xl border-l border-gold pl-6 font-serif text-xl leading-8 text-cream/80">
+              “Clients deserve lawyers who are accessible, responsive,
+              meticulous and committed to their matters.”
             </blockquote>
 
             <Link
