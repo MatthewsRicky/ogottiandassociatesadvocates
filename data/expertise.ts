@@ -29,9 +29,9 @@ export const expertise = [
   {
     number: "04",
     slug: "estate-planning-succession-probate",
-    title: "Estate Planning",
+    title: "Estate Planning and Succession",
     shortDescription:
-      "Succession, wills, trusts, succession planning, probate and administration of estates, nomination of beneficiaries, power of attorney.",
+      "Succession, wills, trusts, probate and administration of estates, nomination of beneficiaries, power of attorney.",
     description:
       "We advise individuals and families on testamentary planning, trusts, succession, grants of representation and estate administration.",
   },
