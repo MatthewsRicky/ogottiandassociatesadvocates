@@ -1,40 +1,7 @@
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import { associates, legalAssistant, managingPartner } from "@/data/team";
-
-function InitialsCard({
-  name,
-  role,
-  initials,
-}: {
-  name: string;
-  role: string;
-  initials: string;
-}) {
-  return (
-    <div className="relative aspect-[4/5] overflow-hidden bg-charcoal">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(184,154,90,0.16),transparent_45%)]" />
-
-      <div className="absolute inset-6 border border-gold/15 sm:inset-8" />
-
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="font-serif text-7xl tracking-[-0.05em] text-gold/80 sm:text-8xl">
-          {initials}
-        </span>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink via-ink/85 to-transparent px-6 pb-6 pt-16 sm:px-8 sm:pb-8">
-        <p className="text-[9px] font-medium uppercase tracking-[0.24em] text-gold">
-          {role}
-        </p>
-
-        <p className="mt-2 font-serif text-2xl leading-tight text-cream">
-          {name}
-        </p>
-      </div>
-    </div>
-  );
-}
+import Image from "next/image";
 
 export default function TeamSection() {
   return (
@@ -78,12 +45,13 @@ export default function TeamSection() {
 
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-20">
             <Reveal>
-              <div className="relative aspect-[4/5] overflow-hidden bg-charcoal">
-                {/* Replace this path if the final image location changes */}
-                <img
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
                   src="/images/team/leonida.jpeg"
                   alt={`${managingPartner.name}, ${managingPartner.role}`}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
                 />
 
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(184,154,90,0.12),transparent_45%)]" />
@@ -144,24 +112,41 @@ export default function TeamSection() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
             {associates.map((associate, index) => {
-              const initials = associate.name
-                .split(" ")
-                .map((part) => part[0])
-                .join("")
-                .slice(0, 2);
+              const image =
+                associate.name === "Irene Awuor"
+                  ? "/images/team/irene.jpeg"
+                  : "/images/team/dinah-randa.jpeg";
 
               return (
                 <Reveal key={associate.name} delay={index * 0.08}>
                   <article>
-                    <InitialsCard
-                      name={associate.name}
-                      role={associate.role}
-                      initials={initials}
-                    />
+                    {/* Associate image */}
+                    <div className="relative aspect-[4/5] overflow-hidden">
+                      <Image
+                        src={image}
+                        alt={`${associate.name}, ${associate.role}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                      />
 
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(184,154,90,0.10),transparent_45%)]" />
+
+                      <div className="absolute inset-6 border border-gold/20 sm:inset-8" />
+                    </div>
+
+                    {/* Associate information */}
                     <div className="pt-6">
                       <p className="text-[10px] uppercase tracking-[0.2em] text-gold-dark">
                         {associate.admission}
+                      </p>
+
+                      <h3 className="mt-3 font-serif text-3xl leading-tight tracking-[-0.025em] text-ink">
+                        {associate.name}
+                      </h3>
+
+                      <p className="mt-2 text-xs uppercase tracking-[0.18em] text-muted">
+                        {associate.role}
                       </p>
 
                       <p className="mt-5 text-sm leading-7 text-muted">
@@ -204,15 +189,19 @@ export default function TeamSection() {
 
           <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-20">
             <Reveal>
-              <InitialsCard
-                name={legalAssistant.name}
-                role={legalAssistant.role}
-                initials={legalAssistant.name
-                  .split(" ")
-                  .map((part) => part[0])
-                  .join("")
-                  .slice(0, 2)}
-              />
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="/images/team/christabel.jpeg"
+                  alt={`${legalAssistant.name}, ${legalAssistant.role}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 35vw"
+                  className="object-cover"
+                />
+
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(184,154,90,0.10),transparent_45%)]" />
+
+                <div className="absolute inset-6 border border-gold/20 sm:inset-8" />
+              </div>
             </Reveal>
 
             <Reveal delay={0.1}>
