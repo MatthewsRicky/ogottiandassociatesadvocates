@@ -43,12 +43,6 @@ export default function ContactDetails() {
                 {firm.contact.primaryEmail}
               </a>
 
-              <a
-                href={`mailto:${firm.contact.partnerEmail}`}
-                className="text-ink transition-colors hover:text-gold-dark"
-              >
-                {firm.contact.partnerEmail}
-              </a>
             </div>
           </Reveal>
 

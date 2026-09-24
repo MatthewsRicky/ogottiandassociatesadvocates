@@ -137,10 +137,7 @@ export default function TeamSection() {
 
                     {/* Associate information */}
                     <div className="pt-6">
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-gold-dark">
-                        {associate.admission}
-                      </p>
-
+                      
                       <h3 className="mt-3 font-serif text-3xl leading-tight tracking-[-0.025em] text-ink">
                         {associate.name}
                       </h3>
@@ -152,16 +149,29 @@ export default function TeamSection() {
                       <p className="mt-5 text-sm leading-7 text-muted">
                         {associate.shortBio}
                       </p>
-
-                      <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
-                        {associate.practiceAreas.map((area) => (
-                          <span
-                            key={area}
-                            className="text-[9px] uppercase tracking-[0.16em] text-ink/55"
+                      <div className="mt-8 space-y-3 border-l border-gold/50 pl-6">
+                        {associate.education.map((item) => (
+                          <p
+                            key={item}
+                            className="text-sm leading-7 text-ink/70"
                           >
-                            {area}
-                          </span>
+                            {item}
+                          </p>
                         ))}
+
+                        <p className="pt-1 text-sm leading-7 text-ink/70">
+                          {associate.admission}
+                        </p>
+                        <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
+                          {associate.practiceAreas.map((area) => (
+                            <span
+                              key={area}
+                              className="text-[9px] uppercase tracking-[0.16em] text-ink/55"
+                            >
+                              {area}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </article>
@@ -191,7 +201,7 @@ export default function TeamSection() {
             <Reveal>
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/images/team/christabel.jpeg"
+                  src="/images/team/christabel-2.jpeg"
                   alt={`${legalAssistant.name}, ${legalAssistant.role}`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 35vw"
