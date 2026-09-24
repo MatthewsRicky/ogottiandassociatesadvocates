@@ -115,7 +115,7 @@ export default function TeamSection() {
               const image =
                 associate.name === "Irene Awuor"
                   ? "/images/team/irene.jpeg"
-                  : "/images/team/dinah-randa.jpeg";
+                  : "/images/team/dinah.jpeg";
 
               return (
                 <Reveal key={associate.name} delay={index * 0.08}>
