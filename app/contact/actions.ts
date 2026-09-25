@@ -5,6 +5,9 @@ import { contactSchema, type ContactFormData } from "@/lib/validations/contact";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const FROM_EMAIL = process.env.FROM_EMAIL;
+const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL;
+
 export type ContactActionState = {
   success: boolean;
   message: string;
@@ -50,8 +53,8 @@ export async function submitContact(
 
   try {
     await resend.emails.send({
-      from: "Website Enquiries <onboarding@resend.dev>",
-      to: ["matthewsrickypro@gmail.com"],
+      from: `Website Enquiries <${FROM_EMAIL}>`,
+      to: [CONTACT_TO_EMAIL!],
       replyTo: data.email,
 
       subject: `New Website Enquiry — ${data.matter}`,
